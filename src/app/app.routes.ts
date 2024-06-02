@@ -6,9 +6,9 @@ import { PartyFormComponent } from './pages/party-form/party-form.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
-    {path: 'login', component: LoginComponent},
-    {path: 'party-list', component: PartyListComponent},
-    {path: 'party-form', component: PartyFormComponent},
-    {path: '', component: HomeComponent},
-    {path: '**', component: PageNotFoundComponent}
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'party-list', component: PartyListComponent },
+  { path: 'party-form', component: PartyFormComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
