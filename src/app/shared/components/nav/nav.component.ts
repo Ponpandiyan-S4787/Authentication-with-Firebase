@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { CommonModule } from '@angular/common';
+import { MaterialsModule } from '../../modules/materials/materials.module';
 
 @Component({
   selector: 'pms-nav',
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule],
+  imports: [MaterialsModule, CommonModule],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
 })
-export class NavComponent {}
+export class NavComponent {
+  onLoginBtnClicked() {
+    console.log('clicked');
+  }
+}

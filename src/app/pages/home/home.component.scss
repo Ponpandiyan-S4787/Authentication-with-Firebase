@@ -33,3 +33,24 @@ section {
   justify-content: center;
   width: 120px;
 }
+.pms__home {
+  &--container {
+    max-width: 50%;
+    margin: 8% auto;
+    background: white;
+    padding: 10px;
+    background: inherit;
+  }
+  &--header {
+    font-size: 35px;
+    &--underline {
+      color: red;
+    }
+  }
+  &--description {
+    font-size: 15px;
+  }
+  &--content {
+    display: flex;
+  }
+}
