@@ -1,0 +1,13 @@
+<div class="pms__input--container">
+  <mat-form-field class="example-full-width">
+    <mat-label>{{ label }}</mat-label>
+    <input
+      matInput
+      type="{{ type }}"
+      placeholder="{{ placeholder }}"
+      (ngModelChange)="onChange($event)"
+      [(ngModel)]="value"
+      [ngStyle]="style"
+    />
+  </mat-form-field>
+</div>

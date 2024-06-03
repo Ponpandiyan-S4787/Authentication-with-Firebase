@@ -1,17 +1,19 @@
 <mat-toolbar>
   <mat-toolbar-row>
-    <span>Second Line</span>
+    <span class="pms__nav--leftContent">Party Management System</span>
     <span class="example-spacer"></span>
     <button
-      mat-icon-button
-      class="example-icon favorite-icon"
+      mat-button
+      class="example-icon favorite-icon pms__nav--loginBtn"
       aria-label="Example icon-button with heart icon"
+      (click)="onLoginBtnClicked()"
     >
-      <mat-icon>favorite</mat-icon>
+      login
+      <mat-icon>login</mat-icon>
     </button>
     <button
       mat-icon-button
-      class="example-icon"
+      class="example-icon pms__nav--shareBtn"
       aria-label="Example icon-button with share icon"
     >
       <mat-icon>share</mat-icon>
