@@ -1,13 +1,20 @@
-<div class="pms__input--container">
+<div class="pms__input--container example-form">
   <mat-form-field class="example-full-width">
     <mat-label>{{ label }}</mat-label>
     <input
-      matInput
+      class="pms__input"
       type="{{ type }}"
+      matInput
+      [formControl]="formControls"
       placeholder="{{ placeholder }}"
       (ngModelChange)="onChange($event)"
       [(ngModel)]="value"
       [ngStyle]="style"
     />
+    @if (formControls.hasError('label') && !formControls.hasError('required')) {
+    <mat-error>Please enter a valid {{ label }}</mat-error>
+    } @if (formControls.hasError('required')) {
+    <mat-error>{{ label }} is <strong>required</strong></mat-error>
+    }
   </mat-form-field>
 </div>
