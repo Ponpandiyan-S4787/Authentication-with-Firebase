@@ -1,0 +1,16 @@
+.pms__loginpopup {
+  float: right;
+  margin: 50px 100px;
+  padding: 50px;
+  background: white;
+  &--header {
+    &--heading {
+      color: red;
+      u {
+      }
+      &--sup {
+        color: red;
+      }
+    }
+  }
+}
