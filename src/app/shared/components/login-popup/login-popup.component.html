@@ -1,0 +1,48 @@
+<div class="pms__loginpopup">
+  <div class="pms__loginpopup--header">
+    <h1 class="pms__loginpopup--header--heading">
+      <u>Please</u> Login Here
+      <sup class="pms__loginpopup--header--heading--sup">*</sup>
+    </h1>
+  </div>
+  <div class="pms__loginpopup--forms">
+    <form [formGroup]="loginForm">
+      <div class="pms__loginpopup--forms-inputs">
+        <pms-input
+          [label]="'User Name'"
+          [type]="'text'"
+          [placeholder]="'Enter User Name'"
+          formControlName="userName"
+          [style]="{
+            color: 'blue',
+          }"
+        ></pms-input>
+        <pms-input
+          [label]="'Password'"
+          [type]="'password'"
+          [placeholder]="'Enter password'"
+          formControlName="password"
+          [style]="{
+            color: 'red',
+          }"
+        ></pms-input>
+      </div>
+    </form>
+    <div class="pms__loginpopup--forms-buttons">
+      <pms-button
+        [label]="'submit'"
+        [style]="{
+          color: 'white',
+          width: '100%',
+          backgroundColor: '#005cbb'
+        }"
+        (btnClicked)="onSubmitted()"
+      ></pms-button>
+      <pms-button
+        [label]="'cancel'"
+        [style]="{ color: 'white', width: '100%', backgroundColor: '#ba1a1a' }"
+        (btnClicked)="onCanceled()"
+      ></pms-button>
+    </div>
+  </div>
+</div>

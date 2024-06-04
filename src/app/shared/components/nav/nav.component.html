@@ -8,7 +8,7 @@
       aria-label="Example icon-button with heart icon"
       (click)="onLoginBtnClicked()"
     >
-      login
+      Login
       <mat-icon>login</mat-icon>
     </button>
     <button
@@ -20,3 +20,10 @@
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
+<hr />
+
+@if(loginPopup){
+<div class="login__popup">
+  <pms-login-popup (cancelEvent)="cancelClicked($event)"></pms-login-popup>
+</div>
+}
