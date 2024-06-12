@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'pms-login',
@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.scss',
   imports: [],
 })
-export class LoginComponent {}
+export class LoginComponent implements OnInit {
+  constructor() {}
+  ngOnInit(): void {}
+}
