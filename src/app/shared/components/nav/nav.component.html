@@ -1,10 +1,19 @@
 <mat-toolbar>
   <mat-toolbar-row>
-    <span class="pms__nav--leftContent">Authendications</span>
+    <span class="auth__nav--leftContent">Authendications</span>
     <span class="example-spacer"></span>
     <button
       mat-button
-      class="example-icon favorite-icon pms__nav--loginBtn"
+      class="example-icon favorite-icon auth__nav--loginBtn"
+      aria-label="Example icon-button with heart icon"
+      (click)="onSignupBtnClicked()"
+    >
+      SignUp
+      <mat-icon>how to reg</mat-icon>
+    </button>
+    <button
+      mat-button
+      class="example-icon favorite-icon auth__nav--loginBtn"
       aria-label="Example icon-button with heart icon"
       (click)="onLoginBtnClicked()"
     >
@@ -13,7 +22,7 @@
     </button>
     <button
       mat-icon-button
-      class="example-icon pms__nav--shareBtn"
+      class="example-icon auth__nav--shareBtn"
       aria-label="Example icon-button with share icon"
     >
       <mat-icon>share</mat-icon>
@@ -22,8 +31,12 @@
 </mat-toolbar>
 <hr />
 
-@if(loginPopup){
+@if(signupPopup){
+<div class="signup_popup">
+  <auth-signup-popup (cancelEvent)="cancelClicked($event)" (afterSignup)="openLogin($event)"></auth-signup-popup>
+</div>
+} @else if(loginPopup){
 <div class="login__popup">
-  <pms-login-popup (cancelEvent)="cancelClicked($event)"></pms-login-popup>
+  <auth-login-popup (cancelEvent)="cancelClicked($event)"></auth-login-popup>
 </div>
 }

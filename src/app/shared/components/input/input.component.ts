@@ -10,7 +10,7 @@ import {
 import { formControls } from '../../interfaces/forms-interface';
 
 @Component({
-  selector: 'pms-input',
+  selector: 'auth-input',
   standalone: true,
   imports: [CommonModule, MaterialsModule, FormsModule, ReactiveFormsModule],
   providers: [
