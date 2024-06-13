@@ -1,14 +1,14 @@
-<div class="pms__loginpopup">
-  <div class="pms__loginpopup--header">
-    <h1 class="pms__loginpopup--header--heading">
-      <u>Please</u> Login Here
-      <sup class="pms__loginpopup--header--heading--sup">*</sup>
+<div class="auth__loginpopup">
+  <div class="auth__loginpopup--header">
+    <h1 class="auth__loginpopup--header--heading">
+      <u>Login Here</u> 
+      <sup class="auth__loginpopup--header--heading--sup">*</sup>
     </h1>
   </div>
-  <div class="pms__loginpopup--forms">
+  <div class="auth__loginpopup--forms">
     <form [formGroup]="loginForm">
-      <div class="pms__loginpopup--forms-inputs">
-        <pms-input
+      <div class="auth__loginpopup--forms-inputs">
+        <auth-input
           [label]="'Email'"
           [type]="'text'"
           [placeholder]="'Enter User Email'"
@@ -16,8 +16,8 @@
           [style]="{
             color: 'blue',
           }"
-        ></pms-input>
-        <pms-input
+        ></auth-input>
+        <auth-input
           [label]="'Password'"
           [type]="'password'"
           [placeholder]="'Enter password'"
@@ -25,11 +25,11 @@
           [style]="{
             color: 'red',
           }"
-        ></pms-input>
+        ></auth-input>
       </div>
     </form>
-    <div class="pms__loginpopup--forms-buttons">
-      <pms-button
+    <div class="auth__loginpopup--forms-buttons">
+      <auth-button
         [label]="'submit'"
         [style]="{
           color: 'white',
@@ -37,13 +37,12 @@
           backgroundColor: '#005cbb'
         }"
         (btnClicked)="onSubmitted()"
-      ></pms-button>
-      <pms-button
+      ></auth-button>
+      <auth-button
         [label]="'cancel'"
         [style]="{ color: 'white', width: '100%', backgroundColor: '#ba1a1a' }"
         (btnClicked)="onCanceled()"
-      ></pms-button>
+      ></auth-button>
     </div>
   </div>
 </div>
-

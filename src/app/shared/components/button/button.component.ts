@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialsModule } from '../../modules/materials/materials.module';
 
 @Component({
-  selector: 'pms-button',
+  selector: 'auth-button',
   standalone: true,
   imports: [CommonModule, MaterialsModule],
   templateUrl: './button.component.html',

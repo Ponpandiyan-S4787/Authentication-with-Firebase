@@ -1,0 +1,66 @@
+<div class="auth__signuppopup">
+  <div class="auth__signuppopup--header">
+    <h1 class="auth__signuppopup--header--heading">
+      <u>Signup Here</u>
+      <sup class="auth__signuppopup--header--heading--sup">*</sup>
+    </h1>
+  </div>
+  <div class="auth__signuppopup--forms">
+    <form [formGroup]="signupForm">
+      <div class="auth__signuppopup--forms-inputs">
+        <auth-input
+          [label]="'First Name'"
+          [type]="'text'"
+          [placeholder]="'First Name'"
+          formControlName="firstName"
+          [style]="{
+              color: 'blue',
+            }"
+        ></auth-input>
+        <auth-input
+          [label]="'Last Name'"
+          [type]="'text'"
+          [placeholder]="'Last Name'"
+          formControlName="lastName"
+          [style]="{
+              color: 'blue',
+            }"
+        ></auth-input>
+        <auth-input
+          [label]="'Email'"
+          [type]="'text'"
+          [placeholder]="'Enter User Email'"
+          formControlName="email"
+          [style]="{
+              color: 'blue',
+            }"
+        ></auth-input>
+        <auth-input
+          [label]="'Password'"
+          [type]="'password'"
+          [placeholder]="'Enter password'"
+          formControlName="password"
+          [style]="{
+              color: 'red',
+            }"
+        ></auth-input>
+      </div>
+    </form>
+    <div class="auth__signuppopup--forms-buttons">
+      <auth-button
+        [label]="'Register'"
+        [style]="{
+          color: 'white',
+          width: '100%',
+          backgroundColor: '#005cbb'
+        }"
+        (btnClicked)="onRegistered()"
+      ></auth-button>
+      <auth-button
+        [label]="'cancel'"
+        [style]="{ color: 'white', width: '100%', backgroundColor: '#ba1a1a' }"
+        (btnClicked)="onCanceled()"
+      ></auth-button>
+    </div>
+  </div>
+</div>
